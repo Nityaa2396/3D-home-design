@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
-import { useThree, useFrame } from "@react-three/fiber";
-import { Box, Plane, useGLTF } from "@react-three/drei";
+import { useThree } from "@react-three/fiber"; //useFrame
+import { Box, Plane } from "@react-three/drei"; //useGLTF
 import { Mesh, Vector3 } from "three";
 import { FurnitureItem } from "@/models/room";
 
@@ -24,12 +24,12 @@ export default function RoomScene({
   furniture,
   onMoveFurniture,
   onRotateFurniture,
-  onRemoveFurniture,
-}: RoomSceneProps) {
+}: // onRemoveFurniture,
+RoomSceneProps) {
   const { width, length, height } = dimensions;
   const [dragging, setDragging] = useState<string | null>(null);
   const [hovered, setHovered] = useState<string | null>(null);
-  const { camera } = useThree();
+  // const { camera } = useThree();
 
   // Create room walls and floor
   return (
@@ -94,6 +94,11 @@ export default function RoomScene({
           onRotate={(rotation) => onRotateFurniture(item.id, rotation)}
         />
       ))}
+
+      {/* Render something conditionally based on dragging state */}
+      {dragging && (
+        <div className="dragging-indicator">Dragging: {dragging}</div>
+      )}
 
       {/* Grid Helper */}
       <gridHelper args={[10, 10, "#888888", "#444444"]} />

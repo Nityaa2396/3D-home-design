@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+// import { useState, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { Button } from "@/components/ui/button";
@@ -8,27 +8,18 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Badge } from "@/components/ui/badge";
-import {
-  Wand2,
-  Save,
-  Share,
-  Undo,
-  Redo,
-  ZoomIn,
-  ZoomOut,
-  Trash2,
-} from "lucide-react";
+// import { Badge } from "@/components/ui/badge";
+import { Save, Share, Undo, Redo, ZoomIn, ZoomOut, Trash2 } from "lucide-react"; //Wand2,
 import RoomScene from "@/components/features/RoomScene";
 import FurnitureCatalog from "@/components/features/FurnitureCatalog";
 import AIRecommendations from "@/components/features/AIRecommendations";
 import { useToast } from "@/hooks/use-toast";
-import { useMobile } from "@/hooks/use-mobile";
+// import { useMobile } from "@/hooks/use-mobile";
 import { useRoomDesign } from "@/hooks/useRoomDesign";
 
 export default function DesignPage() {
   const { toast } = useToast();
-  const isMobile = useMobile();
+  // const isMobile = useMobile();
   const {
     roomDimensions,
     setRoomDimensions,

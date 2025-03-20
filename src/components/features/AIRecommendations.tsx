@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Wand2, Check, X } from "lucide-react";
+import { Wand2, Check } from "lucide-react";
 import { FurnitureItem } from "@/models/room";
 
 interface AIRecommendationsProps {
@@ -126,7 +126,7 @@ const sampleRecommendations = [
 
 export default function AIRecommendations({
   roomDimensions,
-  placedFurniture,
+  // placedFurniture,
   onApplyRecommendation,
 }: AIRecommendationsProps) {
   const [recommendations, setRecommendations] = useState(sampleRecommendations);
